@@ -20,7 +20,7 @@ type error = TupleToObject<[[1, 2], {}]>
 
 
 // ============= Your Code Here =============
-type TupleToObject<T extends readonly any[]> = { [Key in T[number]]: Key }
+type TupleToObject<T extends readonly (string | number | symbol)[]> = { [Key in T[number]]: Key }
 
 // ============= description =============
 
